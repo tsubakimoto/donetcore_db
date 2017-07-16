@@ -1,5 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
 using static System.Console;
 
 namespace DotnetCoreApp.MySql
@@ -8,6 +7,14 @@ namespace DotnetCoreApp.MySql
     {
         private static readonly string connectionString = "Database=fukuten; Data Source=fukuten0728.mysql.database.azure.com; User Id=yuta@fukuten0728; Password={your_password}";
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
+        /// <remarks>
+        /// create table users (id int not null auto_increment primary key, name varchar(128) not null);
+        /// insert into users(name) values('yuta'), ('tsubaki');
+        /// </remarks>
         static void Main(string[] args)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -19,7 +26,7 @@ namespace DotnetCoreApp.MySql
                 {
                     while (reader.Read())
                     {
-                        string row = $"{reader["name"]}";
+                        string row = $"{reader["id"]}\t{reader["name"]}";
                         WriteLine(row);
                     }
                 }
