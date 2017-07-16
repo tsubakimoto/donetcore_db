@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using static System.Console;
 
 namespace DotnetCoreApp.MySql
 {
@@ -8,7 +10,24 @@ namespace DotnetCoreApp.MySql
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                MySqlCommand command = new MySqlCommand("SELECT * FROM users", connection);
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string row = $"{reader["name"]}";
+                        WriteLine(row);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            ReadLine();
         }
     }
 }
