@@ -21,7 +21,7 @@ namespace DotnetCoreApp.MySql
             {
                 connection.Open();
 
-                MySqlCommand command = new MySqlCommand("SELECT * FROM users", connection);
+                using (MySqlCommand command = new MySqlCommand("SELECT * FROM users", connection))
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
