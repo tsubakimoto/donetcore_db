@@ -31,7 +31,7 @@ namespace DotnetCoreApp.PostgreSql
                     }
                 }
 
-                connection.Clone();
+                connection.Close();
             }
 
             ReadLine();
