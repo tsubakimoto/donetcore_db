@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCoreApp.Shared", "Dot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCoreApp.PostgreSql", "DotnetCoreApp.PostgreSql\DotnetCoreApp.PostgreSql.csproj", "{D570AC11-B952-4EB5-89AC-7B82FCDF65BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCoreApp.Mongo", "DotnetCoreApp.Mongo\DotnetCoreApp.Mongo.csproj", "{7386BF21-16C7-46FC-8FF4-DCD1363C2D26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCoreApp.Mongo", "DotnetCoreApp.Mongo\DotnetCoreApp.Mongo.csproj", "{7386BF21-16C7-46FC-8FF4-DCD1363C2D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCoreApp.DocumentDb", "DotnetCoreApp.DocumentDb\DotnetCoreApp.DocumentDb.csproj", "{B44DD649-05EA-4E25-972A-8D2361F3595F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7386BF21-16C7-46FC-8FF4-DCD1363C2D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7386BF21-16C7-46FC-8FF4-DCD1363C2D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7386BF21-16C7-46FC-8FF4-DCD1363C2D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B44DD649-05EA-4E25-972A-8D2361F3595F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B44DD649-05EA-4E25-972A-8D2361F3595F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44DD649-05EA-4E25-972A-8D2361F3595F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B44DD649-05EA-4E25-972A-8D2361F3595F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
